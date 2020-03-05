@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>doc</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style type="text/css">
+        /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+        /* Author: Nicolas Hery - http://nicolashery.com */
+        /* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+        /* Source: https://github.com/nicolahery/markdownpad-github */
+
+        /* RESET
+        =============================================================================*/
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        /* BODY
+        =============================================================================*/
+
+        body {
+            font-family: Helvetica, arial, freesans, clean, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        body > *:first-child {
+            margin-top: 0 !important;
+        }
+
+        body > *:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* BLOCKS
+        =============================================================================*/
+
+        p, blockquote, ul, ol, dl, table, pre {
+            margin: 15px 0;
+        }
+
+        /* HEADERS
+        =============================================================================*/
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 20px 0 10px;
+            padding: 0;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+            font-size: inherit;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+
+        h6 {
+            color: #777;
+            font-size: 14px;
+        }
+
+        body > h2:first-child, body > h1:first-child, body > h1:first-child + h2, body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+            margin-top: 10px;
+        }
+
+        /* LINKS
+        =============================================================================*/
+
+        a {
+            color: #4183C4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* LISTS
+        =============================================================================*/
+
+        ul, ol {
+            padding-left: 30px;
+        }
+
+        ul li > :first-child,
+        ol li > :first-child,
+        ul li ul:first-of-type,
+        ol li ol:first-of-type,
+        ul li ol:first-of-type,
+        ol li ul:first-of-type {
+            margin-top: 0px;
+        }
+
+        ul ul, ul ol, ol ol, ol ul {
+            margin-bottom: 0;
+        }
+
+        dl {
+            padding: 0;
+        }
+
+        dl dt {
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            padding: 0;
+            margin: 15px 0 5px;
+        }
+
+        dl dt:first-child {
+            padding: 0;
+        }
+
+        dl dt > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dt > :last-child {
+            margin-bottom: 0px;
+        }
+
+        dl dd {
+            margin: 0 0 15px;
+            padding: 0 15px;
+        }
+
+        dl dd > :first-child {
+            margin-top: 0px;
+        }
+
+        dl dd > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* CODE
+        =============================================================================*/
+
+        pre, code, tt {
+            font-size: 12px;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+        }
+
+        code, tt {
+            margin: 0 0px;
+            padding: 0px 0px;
+            white-space: nowrap;
+            border: 1px solid #eaeaea;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+        }
+
+        pre > code {
+            margin: 0;
+            padding: 0;
+            white-space: pre;
+            border: none;
+            background: transparent;
+        }
+
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+
+        pre code, pre tt {
+            background-color: transparent;
+            border: none;
+        }
+
+        kbd {
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            background-color: #DDDDDD;
+            background-image: linear-gradient(#F1F1F1, #DDDDDD);
+            background-repeat: repeat-x;
+            border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+            border-image: none;
+            border-radius: 2px 2px 2px 2px;
+            border-style: solid;
+            border-width: 1px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 10px;
+            padding: 1px 4px;
+        }
+
+        /* QUOTES
+        =============================================================================*/
+
+        blockquote {
+            border-left: 4px solid #DDD;
+            padding: 0 15px;
+            color: #777;
+        }
+
+        blockquote > :first-child {
+            margin-top: 0px;
+        }
+
+        blockquote > :last-child {
+            margin-bottom: 0px;
+        }
+
+        /* HORIZONTAL RULES
+        =============================================================================*/
+
+        hr {
+            clear: both;
+            margin: 15px 0;
+            height: 0px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+            border-bottom: 4px solid #ddd;
+            padding: 0;
+        }
+
+        /* TABLES
+        =============================================================================*/
+
+        table th {
+            font-weight: bold;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 6px 13px;
+        }
+
+        table tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+
+        /* IMAGES
+        =============================================================================*/
+
+        img {
+            max-width: 100%
+        }
+    </style>
+</head>
+<body>
+<h1>演示系统业务模型文档</h1>
+<h2>演示系统介绍</h2>
+<blockquote>
+    <p>演示系统使用Demo这个配置，主要业务和物流仓储相关，在本演示模块中
+        我们将使用到其中的两张单据(收货单,上架单)</p>
+</blockquote>
+<h2>演示系统达到的目的</h2>
+<ol>
+    <li>检验新的webapp框架的可用性</li>
+    <li>webapp和实际业务系统之间的集成</li>
+    <li>webapp在不同平台下的跨平台能力</li>
+</ol>
+<blockquote>
+    <p>本演示模型将会在mobile browser,wechat,cordova,android,ios
+        下实现不同的应用，从而检验新框架的跨平台能力
+        4. 演示开发步骤
+        确认使用新框架的开发过程是否是可以让开发人员接受的</p>
+</blockquote>
+<h2>演示系统的界面用例</h2>
+<blockquote>
+    <p>演示系统中在不同的平台下显示的效果可能不同，文档全部是以wechat
+        为目标平台编写的</p>
+</blockquote>
+<h3>登陆界面</h3>
+<blockquote>
+    <p>在演示系统中登陆面，将会完成集成微信登陆的功能，所以在打开应用之后，
+        如果没有做过微信授权的话，会首先弹出微信的授权确认界面，这个界面由
+        微信提供，在完成授权之后，将弹出登陆界面(其实是一个用户绑定界面)，
+        完成登陆之后，下次再打开应用将不再需要进行登陆。</p>
+</blockquote>
+<p><img src="login.png" alt="Login"/></p>
+<h3>首页</h3>
+<blockquote>
+    <p>首页以简单为主，由于本应用只有两个功能点，所以主页使用Tab的展现形式
+        通过点击下方的功能点，进行功能切换,在功能切换的时候内容部分会有一个
+        切换的动画效果</p>
+</blockquote>
+<p><img src="home.png" alt="home"/></p>
+<h3>收货单列表界面</h3>
+<blockquote>
+    <p>收货单列表界面是一个带查询部分的表单</p>
+</blockquote>
+<p>web上的收货单</p>
+<p><img src="shd-web.png" alt="shd-web"/></p>
+<p>支持的操作</p>
+<ul>
+    <li>新增</li>
+</ul>
+<blockquote>
+    <p>新增一张收货单
+        * 查找
+        直接弹出二维码扫描界面，扫描收货单的单据号
+        * 刷新
+        就是界面上的查询按钮的功能
+        * 开打单据
+        在点击一条收货单的时候，打开这种单据</p>
+</blockquote>
+<p>收货单列表的形式</p>
+<blockquote>
+    <p>现在已经完成的这个列表的形式并不是UE组提供的，等UE组确定之后需要重做</p>
+</blockquote>
+<p>需要显示的字段
+    * 收货日期
+    * 收货单编号
+    * 货主</p>
+<h3>上架单列表界面</h3>
+<blockquote>
+    <p>上架单列表界面时一个带查询部分的表单</p>
+</blockquote>
+<p>web上的上架单</p>
+<p><img src="sjd-web.png" alt="sjd-web"/></p>
+<p>webapp上的上架单</p>
+<p><img src="sjd.png" alt="sjd"/></p>
+<p>支持的操作</p>
+<ul>
+    <li>查找</li>
+</ul>
+<blockquote>
+    <p>直接弹出二维码扫描界面，扫描上架单的单据号
+        * 刷新
+        就是界面上的查询按钮的功能
+        * 开打单据
+        在点击一条收货单的时候，打开这种单据</p>
+</blockquote>
+<p>上架单的列表形式</p>
+<p>需要显示的字段
+    * 上架日期
+    * 上架单编号
+    * 供应商
+    * 状态</p>
+<h3>收货单界面</h3>
+<p>web上的收货单</p>
+<p><img src="shd-dtl.png" alt="shd-dtl"/></p>
+<p>webapp上的收货单</p>
+<blockquote>
+    <p>这个界面只是示意作用和最终的结果可以不同,UE组可以根据自己的要求
+        对数据进行重新整合</p>
+</blockquote>
+<p><img src="shd-dtl-webapp.png" alt="shd-dtl-webapp"/></p>
+<p>显示的字段</p>
+<blockquote>
+    <p>由于是演示系统所以不需要显示太多，就示意图的中字段即可</p>
+</blockquote>
+<p>明细列表的显示格式</p>
+<blockquote>
+    <p>由于这个物料列表的字段非常多也并没有图片，都是文字，所以请UE组
+        设计一下这个格式</p>
+</blockquote>
+<p>支持的操作(编辑的时候)
+    * 扫描物流订单号</p>
+<blockquote>
+    <p>作用是完成订单头信息的录入
+        * 扫描物料
+        扫描完成之后在明细中插入对应物流订单号中的对应物料，暂时不支持修改数量</p>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

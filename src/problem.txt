@@ -1,0 +1,53 @@
+1.$.cookie
+  这个函数在cordova中不支持
+2.jsext这个库引入有问题
+  里面的Lang使用的时var,无法被外部进行引用,只能直接使用在浏览器的引用中
+3.View这个对象无法访问，问题和2一样
+4.YIUI,UI,Svr三个对象无法访问
+
+var YIUI =  {};
+var UI={};
+var Svr={};
+exports.YIUI = YIUI;
+
+exports.UI=UI;
+
+exports.Svr=Svr;
+
+var datatype=require('./datatype');
+
+var DataType = datatype.DataType;
+
+var jQuery = $ = require('jquery');
+
+var jstz = require('jstz');
+
+var Decimal = require('decimal.js');
+
+YIUI.View = View;
+
+web.xml
+
+<filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/servlet</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/uiproxy</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
+        <url-pattern>/attach</url-pattern>
+    </filter-mapping>
+
+erorCallback

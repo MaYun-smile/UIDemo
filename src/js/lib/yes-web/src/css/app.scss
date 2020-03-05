@@ -1,0 +1,28 @@
+@import '../../../../node_modules/weui/dist/style/weui.css';
+@import 'app.css';
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.weui_cell:before {
+    display: none;
+}
+
+.weui_cells:after {
+    display: none;
+}
+
+.weui_cells:before {
+    display: none;
+}
+
+label {
+    display: block;
+}
