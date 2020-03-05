@@ -1,2 +1,0 @@
-export { GridView, CellLayoutRowDetail, DefaultGridRow, TextGrid, withDetail } from 'yes-native/dist/components/Grid';
-// export { withDetail,gridview, TextGrid, CellLayoutRowDetail } from 'yes-native/dist/components/Grid';
